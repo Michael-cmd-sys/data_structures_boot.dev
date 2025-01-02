@@ -1,12 +1,13 @@
 class Node:
-    def __init__(self, val):
-        self.val = val
+    def __init__(self, data):
+        self.val = data
         self.next = None
 
-    def set_next(self, node):
-        if self.val:
-            self.next = node.val
-            node.next = None
+class LinkedList:
+    def __init__(self):
+        self.head = None
 
-    def __repr__(self):
-        return self.val
+    def add_next(self, node):
+        new_node = node
+        self.head = node.val
+        new_node.next = None
